@@ -7,6 +7,13 @@ a {
 	text-decoration: none;
 }
 
+body {
+	min-height    : 100vh;
+	display       : flex;
+	flex-direction: column;
+
+}
+
 .container {
 	position : relative;
 	z-index  : 1;
@@ -18,6 +25,10 @@ a {
 .logo {
 	width : 179px;
 	height: 41px;
+}
+
+.main {
+	flex-grow: 1;
 }
 
 .header {
@@ -67,4 +78,36 @@ a {
 
 .menu__link:hover {
 	border-bottom: 1px solid #ffffff;
+}
+
+.footer {
+	padding: 30px 0;
+}
+
+.footer__top {
+	padding         : 30px 0;
+	background-color: #f4f7f6;
+}
+
+.footer__copy {
+	padding-top: 60px;
+	font-weight: 700;
+	font-size  : 12px;
+	line-height: 40px;
+	text-align : center;
+	color      : #999999;
+}
+
+.footer__social {
+	display        : flex;
+	justify-content: center;
+	column-gap     : 30px;
+}
+
+.footer__social-link {
+	height: 20px;
+}
+
+.footer__social-img {
+	height: 100%;
 }
