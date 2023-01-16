@@ -316,3 +316,24 @@ body {
 .form__btn:hover {
 	background-color: #000000;
 }
+
+.tags__list {
+	display  : flex;
+	flex-wrap: wrap;
+	gap      : 5px;
+}
+
+.tags__item {
+	padding         : 5px 10px;
+	border          : 3px solid #eeeeee;
+	background-color: rgba(244, 243, 241, 0.0);
+	font-weight     : 700;
+	font-size       : 12px;
+	text-transform  : uppercase;
+	color           : #0f0d0e;
+	transition      : all 0.2s;
+}
+
+.tags__item:hover {
+	border-color: #b59f5b;
+}
