@@ -337,3 +337,28 @@ body {
 .tags__item:hover {
 	border-color: #b59f5b;
 }
+
+.topics__item {
+	display      : flex;
+	font-size    : 14px;
+	line-height  : 47px;
+	font-weight  : 700;
+	border-bottom: 1px solid #eee;
+}
+
+.topics__link {
+	transition: all 0.15s;
+}
+
+.topics__link:hover {
+	color: #b59f5b;
+}
+
+.topics__count {
+	margin-top : 4px;
+	margin-left: 5px;
+	font-size  : 12px;
+	line-height: 36px;
+	font-weight: 700;
+	color      : #b59f5b;
+}
