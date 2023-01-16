@@ -32,6 +32,26 @@ body {
 	height: 41px;
 }
 
+.title-aside {
+	position      : relative;
+	margin-bottom : 30px;
+	font-size     : 14px;
+	text-align    : center;
+	text-transform: uppercase;
+	color         : #0f0d0e;
+}
+
+.title-aside::after {
+	content         : '';
+	position        : absolute;
+	bottom          : -10px;
+	left            : 50%;
+	transform       : translateX(-50%);
+	width           : 66px;
+	height          : 3px;
+	background-color: #b59f5b;
+}
+
 .main {
 	flex-grow: 1;
 }
@@ -145,8 +165,9 @@ body {
 }
 
 .post {
-	display   : flex;
-	column-gap: 30px;
+	display    : flex;
+	align-items: flex-start;
+	column-gap : 30px;
 }
 
 .post__img {
@@ -176,20 +197,23 @@ body {
 
 .post__title {
 	margin-top    : 10px;
+	margin-bottom : 30px;
 	font-weight   : 700;
 	font-size     : 20px;
 	line-height   : 24px;
 	text-transform: uppercase;
 	color         : #0f0d0e;
-	transition    : all 0.15s;
 }
 
-.post__title:hover {
+.post__title-link {
+	transition: all 0.15s;
+}
+
+.post__title-link:hover {
 	color: #b59f5b;
 }
 
-.post__info {
-	margin-top : 30px;
+.post-info {
 	display    : flex;
 	column-gap : 15px;
 	font-size  : 12px;
@@ -210,4 +234,85 @@ body {
 	font-size     : 15px;
 	line-height   : 22px;
 	color         : #0f0d0e;
+}
+
+.new-posts__list {
+	display       : flex;
+	flex-direction: column;
+	row-gap       : 22px;
+}
+
+.new-posts__item {
+	display    : flex;
+	column-gap : 20px;
+	align-items: flex-start;
+}
+
+.new-posts__img {
+	width: 70px;
+}
+
+.new-posts__title {
+	margin-top    : 3px;
+	font-size     : 14px;
+	line-height   : 18px;
+	text-transform: uppercase;
+}
+
+.new-posts__date {
+	font-size: 12px;
+}
+
+.new-posts__link {
+	transition: all 0.15s;
+}
+
+.new-posts__link:hover {
+	color: #b59f5b;
+}
+
+.form {
+	display       : flex;
+	flex-direction: column;
+	row-gap       : 15px;
+}
+
+.form-search {
+	display    : block;
+	display    : flex;
+	align-items: center;
+}
+
+.form__input {
+	width           : 100%;
+	padding         : 15px;
+	border          : 1px solid #f4f7f6;
+	outline         : none;
+	font-size       : 13px;
+	background-color: #f4f7f6;
+}
+
+.form__input:focus {
+	border: 1px solid #b59f5b;
+}
+
+.form__btn {
+	width           : 100%;
+	padding         : 14px;
+	border          : none;
+	background-color: #b59f5b;
+	font-size       : 14px;
+	font-weight     : 700;
+	text-transform  : uppercase;
+	color           : #ffffff;
+	cursor          : pointer;
+	transition      : all 0.25s;
+}
+
+.form__btn--small {
+	max-width: 50px;
+}
+
+.form__btn:hover {
+	background-color: #000000;
 }
