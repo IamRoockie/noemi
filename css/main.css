@@ -156,12 +156,9 @@ body {
 	row-gap       : 60px;
 }
 
-.posts {
-	flex-basis: 74%;
-}
-
 .sidebar {
-	flex-basis: 26%;
+	max-width: 270px;
+	width    : 100%;
 }
 
 .post {
