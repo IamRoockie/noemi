@@ -8,8 +8,8 @@ a {
 }
 
 img {
-	display: block;
-	width  : 100%;
+	display  : block;
+	max-width: 100%;
 }
 
 body {
@@ -50,6 +50,20 @@ body {
 	width           : 66px;
 	height          : 3px;
 	background-color: #b59f5b;
+}
+
+.heading {
+	display       : block;
+	font-weight   : 700;
+	font-size     : 20px;
+	line-height   : 24px;
+	text-transform: uppercase;
+	color         : #0f0d0e;
+	transition    : all 0.15s;
+}
+
+.heading:hover {
+	color: #b59f5b;
 }
 
 .btn {
@@ -179,6 +193,56 @@ body {
 	height: 100%;
 }
 
+.trends__title {
+	margin-top: 60px;
+	font-size : 20px;
+}
+
+.trends__list {
+	display              : grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap                  : 4px;
+}
+
+.trends__item {
+	position  : relative;
+	min-height: 320px;
+}
+
+.trends__item::before {
+	content         : '';
+	position        : absolute;
+	left            : 0;
+	top             : 0;
+	z-index         : 1;
+	width           : 100%;
+	height          : 100%;
+	background-color: #000000;
+	opacity         : 0.6;
+}
+
+.trends__image {
+	position       : absolute;
+	z-index        : 0;
+	height         : 100%;
+	object-fit     : cover;
+	object-position: center bottom;
+}
+
+.trends__content {
+	position: absolute;
+	z-index : 2;
+	bottom  : 20px;
+	padding : 40px 35px 35px;
+	margin  : 0 20px;
+	border  : 3px solid #b59f5b;
+}
+
+.trends__heading {
+	margin-top: 10px;
+	color     : #fff;
+}
+
 .main {
 	padding: 63px 0;
 }
@@ -209,31 +273,13 @@ body {
 	column-gap : 30px;
 }
 
-.post__img {
+.posts__img {
 	width: 380px;
 }
 
-.post__title {
-	margin-top    : 10px;
-	margin-bottom : 30px;
-	font-weight   : 700;
-	font-size     : 20px;
-	line-height   : 24px;
-	text-transform: uppercase;
-	color         : #0f0d0e;
-}
-
-.post__title--white {
-	color        : #fff;
-	margin-bottom: 0;
-}
-
-.post__title-link {
-	transition: all 0.15s;
-}
-
-.post__title-link:hover {
-	color: #b59f5b;
+.posts__heading {
+	margin-top   : 10px;
+	margin-bottom: 30px;
 }
 
 .post-info {
@@ -244,13 +290,13 @@ body {
 	color      : #888888;
 }
 
-.post__author {
+.posts__author {
 	font-weight: 700;
 	color      : #000000;
 }
 
-.post__desc {
-	margin-top    : 50px;
+.posts__desc {
+	margin-top    : 40px;
 	display       : flex;
 	flex-direction: column;
 	row-gap       : 15px;
@@ -275,24 +321,16 @@ body {
 	width: 70px;
 }
 
-.new-posts__title {
-	margin-top    : 3px;
-	font-size     : 14px;
-	line-height   : 18px;
-	text-transform: uppercase;
+.new-posts__heading {
+	margin-top : 3px;
+	font-size  : 14px;
+	line-height: 18px;
 }
 
 .new-posts__date {
 	font-size: 12px;
 }
 
-.new-posts__link {
-	transition: all 0.15s;
-}
-
-.new-posts__link:hover {
-	color: #b59f5b;
-}
 
 .form {
 	display       : flex;
@@ -366,47 +404,85 @@ body {
 	color      : #b59f5b;
 }
 
-.trends__title {
-	margin-top: 60px;
-	font-size : 20px;
+.shop {
+	padding-bottom: 65px;
 }
 
-.trends__list {
-	display              : grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap                  : 4px;
+.shop__title {
+	font-size: 20px;
 }
 
-.trends__item {
+.shop__heading {
+	margin-bottom: 10px;
+}
+
+.shop__inner {
+	padding-top: 175px;
+	display    : flex;
+	flex-wrap  : wrap;
+	column-gap : 65px;
+	row-gap    : 175px;
+}
+
+.shop__item {
 	position  : relative;
-	min-height: 320px;
+	flex-basis: 33%;
+	max-width : 345px;
+	padding   : 55px 26px 30px;
+	border    : 3px solid #b59f5b;
 }
 
-.trends__item::before {
-	content         : '';
-	position        : absolute;
-	left            : 0;
-	top             : 0;
-	z-index         : 1;
-	width           : 100%;
-	height          : 100%;
-	background-color: #000000;
-	opacity         : 0.6;
+.shop__img-box {
+	position: absolute;
+	z-index : -1;
+	top     : -160px;
+	left    : 25px;
+	right   : 25px;
+	height  : 200px;
 }
 
-.trends__image {
-	position       : absolute;
-	z-index        : 0;
+.shop__img {
+	width          : 100%;
 	height         : 100%;
 	object-fit     : cover;
-	object-position: center bottom;
+	object-position: center;
 }
 
-.trends__content {
-	position: absolute;
-	z-index : 2;
-	bottom  : 20px;
-	padding : 40px 35px 35px;
-	margin  : 0 20px;
-	border  : 3px solid #b59f5b;
+.shop__desc {
+	font-size  : 15px;
+	line-height: 22px;
+}
+
+.shop__link {
+	color: #b59f5b;
+}
+
+.shop__link:hover {
+	text-decoration: underline;
+}
+
+.shop__footer {
+	display        : flex;
+	justify-content: space-between;
+	align-items    : center;
+	margin-top     : 25px;
+}
+
+.shop__price {
+	font-weight: 700;
+	font-size  : 14px;
+	color      : #0f0d0e;
+}
+
+.shop__price-old {
+	text-decoration: line-through;
+}
+
+.shop__price-new {
+	font-size: 20px;
+}
+
+.shop__btn {
+	width     : 140px;
+	text-align: center;
 }
