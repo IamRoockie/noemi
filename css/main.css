@@ -32,7 +32,7 @@ body {
 	height: 41px;
 }
 
-.title-aside {
+.title {
 	position      : relative;
 	margin-bottom : 30px;
 	font-size     : 14px;
@@ -41,7 +41,7 @@ body {
 	color         : #0f0d0e;
 }
 
-.title-aside::after {
+.title::after {
 	content         : '';
 	position        : absolute;
 	bottom          : -10px;
@@ -171,14 +171,14 @@ body {
 	width: 380px;
 }
 
-.post__tags {
+.tags {
 	display   : flex;
 	flex-wrap : wrap;
 	column-gap: 20px;
 	row-gap   : 5px;
 }
 
-.post__tag {
+.tag {
 	font-weight   : 700;
 	font-size     : 14px;
 	line-height   : 16px;
@@ -188,7 +188,7 @@ body {
 	transition    : all 0.15s;
 }
 
-.post__tag:hover {
+.tag:hover {
 	border-bottom: 1px solid #b59f5b;
 }
 
@@ -200,6 +200,11 @@ body {
 	line-height   : 24px;
 	text-transform: uppercase;
 	color         : #0f0d0e;
+}
+
+.post__title--white {
+	color        : #fff;
+	margin-bottom: 0;
 }
 
 .post__title-link {
@@ -314,13 +319,14 @@ body {
 	background-color: #323232;
 }
 
-.tags__list {
+.tags-filter__list {
 	display  : flex;
 	flex-wrap: wrap;
 	gap      : 5px;
 }
 
-.tags__item {
+.tags-filter__link {
+	display         : block;
 	padding         : 5px 10px;
 	border          : 3px solid #eeeeee;
 	background-color: rgba(244, 243, 241, 0.0);
@@ -331,7 +337,7 @@ body {
 	transition      : all 0.2s;
 }
 
-.tags__item:hover {
+.tags-filter__link:hover {
 	border-color: #b59f5b;
 }
 
@@ -358,4 +364,49 @@ body {
 	line-height: 36px;
 	font-weight: 700;
 	color      : #b59f5b;
+}
+
+.trends__title {
+	margin-top: 60px;
+	font-size : 20px;
+}
+
+.trends__list {
+	display              : grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap                  : 4px;
+}
+
+.trends__item {
+	position  : relative;
+	min-height: 320px;
+}
+
+.trends__item::before {
+	content         : '';
+	position        : absolute;
+	left            : 0;
+	top             : 0;
+	z-index         : 1;
+	width           : 100%;
+	height          : 100%;
+	background-color: #000000;
+	opacity         : 0.6;
+}
+
+.trends__image {
+	position       : absolute;
+	z-index        : 0;
+	height         : 100%;
+	object-fit     : cover;
+	object-position: center bottom;
+}
+
+.trends__content {
+	position: absolute;
+	z-index : 2;
+	bottom  : 20px;
+	padding : 40px 35px 35px;
+	margin  : 0 20px;
+	border  : 3px solid #b59f5b;
 }
