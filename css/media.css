@@ -203,6 +203,10 @@
 	}
 
 	/* Shop */
+	.shop__inner {
+		justify-content: center;
+	}
+
 	.shop__title {
 		font-size: 16px;
 	}
