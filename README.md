@@ -4,4 +4,4 @@
 
 [Версия для телефонов](layout/layout_mobile.jpg)
 
- ![](layout/layout.jpg)
+ ![](layout/layout_desktop.jpg)
