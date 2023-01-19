@@ -9,8 +9,47 @@
 		background-position: center;
 	}
 
+	.header {
+		position: relative;
+		z-index : 3;
+	}
+
 	.menu {
 		display: none;
+	}
+
+	.menu-side {
+		position        : fixed;
+		top             : 0;
+		left            : 0;
+		bottom          : 0;
+		transform       : translateX(-100%);
+		display         : block;
+		width           : 50%;
+		padding         : 40px 0;
+		background-color: #000;
+		opacity         : 0.9;
+		transition      : all 0.5s;
+	}
+
+	.menu-side--active {
+		transform: translateX(0);
+	}
+
+	.menu-side .menu__list {
+		width         : 100%;
+		flex-direction: column;
+		row-gap       : 20px;
+	}
+
+	.menu-side .menu__link {
+		margin     : 0 auto;
+		width      : 300px;
+		max-width  : 100%;
+		display    : block;
+		font-size  : 18px;
+		line-height: 3;
+		text-align : center;
 	}
 
 	.menu-gamburger {
