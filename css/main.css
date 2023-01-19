@@ -163,6 +163,9 @@ body {
 }
 
 .menu-gamburger {
+	position       : absolute;
+	top            : 50px;
+	right          : 35px;
 	width          : 23px;
 	display        : none;
 	flex-direction : column;
