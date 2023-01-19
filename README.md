@@ -1,3 +1,3 @@
-# Вёрстка по макету (layout/layout.psd) на чистом HTML и CSS
+# Вёрстка по макету на чистом HTML и CSS
 
  ![](layout/layout.jpg)
