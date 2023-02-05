@@ -1,4 +1,4 @@
-# Вёрстка по макету на чистом HTML и CSS
+# Вёрстка по макету PSD [HTML и CSS]
 
 [Версия для планшетов](layout/layout_tablet.jpg)
 
